@@ -1,4 +1,3 @@
-// FSMComponent.js
 import React, { useState } from "react";
 
 // Define the Finite State Automaton class
@@ -33,7 +32,7 @@ class FiniteStateAutomaton {
   }
 }
 
-// Define the FSMComponent
+// Define the App Component
 function App() {
   const [inputString, setInputString] = useState("");
   const [result, setResult] = useState("");
