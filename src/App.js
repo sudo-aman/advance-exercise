@@ -1,8 +1,7 @@
 import React from "react";
 import ModuloThreeFSM from "./components/ModuloThreeFSM";
-// Define the FSMComponent
-function App() {
 
+function App() {
 
   return (
     <div>
