@@ -1,10 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import ModuloThreeFSM from '../components/ModuloThreeFSM';
+import { render, screen } from '@testing-library/react';
+import App from '../App';
+import '@testing-library/jest-dom'
 
-test('renders ModuloThreeFSM component without crashing', () => {
-  render(<ModuloThreeFSM />);
-  // Add assertions as needed
+describe('App component', () => {
+  test('renders ModuloThreeFSM component', () => {
+    render(<App />);
+    const moduloThreeFSMHeader = screen.getByText('Modulo Three FSM');
+    expect(moduloThreeFSMHeader).toBeInTheDocument();
+  });
 });
-
-

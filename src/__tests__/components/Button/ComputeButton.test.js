@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react'; // Make sure to import screen
+import { render, screen, fireEvent } from '@testing-library/react';
 import ComputeButton from '../../../components/Button/ComputeButton';
+import '@testing-library/jest-dom'
 
 describe('ComputeButton component', () => {
     it('renders button with the provided buttonName', () => {
         render(<ComputeButton buttonName="Compute Remainder" />);
-        expect(screen.getByText('Compute Remainder')).toBeInTheDocument(); // Use screen
+        expect(screen.getByText('Compute Remainder')).toBeInTheDocument();
     });
 
     it('calls onClick function when the button is clicked', () => {

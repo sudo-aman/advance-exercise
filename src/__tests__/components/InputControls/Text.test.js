@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import Text from '../../../components/InputControls/Text';
-import PropTypes from 'prop-types'; // Correct import statement
+import PropTypes from 'prop-types';
+import '@testing-library/jest-dom'
 
 describe('Text component', () => {
     it('renders an input field with the provided value', () => {
@@ -18,7 +19,7 @@ describe('Text component', () => {
     });
 
     it('validates prop types', () => {
-        expect(Text.propTypes).toHaveProperty('value', PropTypes.string); // Use PropTypes
-        expect(Text.propTypes).toHaveProperty('onChange', PropTypes.func); // Use PropTypes
+        expect(Text.propTypes).toHaveProperty('value', PropTypes.string);
+        expect(Text.propTypes).toHaveProperty('onChange', PropTypes.func);
     });
 });
