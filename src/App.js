@@ -4,9 +4,7 @@ import ModuloThreeFSM from "./components/ModuloThreeFSM";
 function App() {
 
   return (
-    <div>
-      <ModuloThreeFSM />
-    </div>
+    <ModuloThreeFSM />
   );
 }
 

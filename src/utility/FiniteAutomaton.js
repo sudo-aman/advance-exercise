@@ -1,5 +1,4 @@
 export default function createFiniteAutomaton(transitionTable) {
-
     return {
         processInput: (inputString, initialState) => {
             let currentState = initialState;
@@ -8,7 +7,6 @@ export default function createFiniteAutomaton(transitionTable) {
                 const symbol = inputString[i];
                 currentState = transitionTable[currentState][symbol];
             }
-
 
             return currentState;
         },
