@@ -10,16 +10,16 @@ describe('createFiniteAutomaton', () => {
         const finiteAutomaton = createFiniteAutomaton(transitionTable);
 
         expect(finiteAutomaton.processInput('101', 'S0')).toBe('S2');
-        expect(finiteAutomaton.processInput('010', 'S1')).toBe('S1');
-        expect(finiteAutomaton.processInput('111', 'S2')).toBe('S2');
+        expect(finiteAutomaton.processInput('010', 'S1')).toBe('S2');
+        expect(finiteAutomaton.processInput('111', 'S2')).toBe('S1');
     });
 
     it('determines final states correctly', () => {
         const finiteAutomaton = createFiniteAutomaton({});
-        const finalStates = ['S2', 'S3', 'S5'];
+        const finalStates = ['S2', 'S3', 'S0'];
 
         expect(finiteAutomaton.isFinalState('S2', finalStates)).toBe(true);
         expect(finiteAutomaton.isFinalState('S4', finalStates)).toBe(false);
-        expect(finiteAutomaton.isFinalState('S5', finalStates)).toBe(true);
+        expect(finiteAutomaton.isFinalState('S0', finalStates)).toBe(true);
     });
 });
